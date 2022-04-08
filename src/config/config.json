@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "ramdayal@1986",
+    "database": "NewData",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "migrationStorage": "json"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "ramdayal@1986",
+    "database": "NewData",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "ramdayal@1986",
+    "database": "NewData",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

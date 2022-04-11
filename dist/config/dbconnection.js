@@ -37,10 +37,18 @@ class Database {
 }
 let databaseInstance = new Database().database;
 let migrate = new umzug_1.default({
+    // migrations: {
+    //     path: path.join(__dirname, '../migrations/'),
+    //     pattern: /\.json$/,
+    //     params: [databaseInstance.getQueryInterface(), Sequelize],
+    // },
     migrations: {
+        params: [
+            databaseInstance.getQueryInterface(),
+            sequelize_1.Sequelize // Sequelize constructor - the required module
+        ],
         path: path.join(__dirname, '../migrations'),
-        pattern: /\.json$/,
-        params: [databaseInstance.getQueryInterface(), sequelize_1.Sequelize],
+        pattern: /\.json$/
     },
     storage: 'sequelize',
     storageOptions: {

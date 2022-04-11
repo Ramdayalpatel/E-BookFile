@@ -5,15 +5,18 @@ exports.default = {
         queryInterface.sequelize.query('Migration is Runiing Successfully').then(async () => {
             await queryInterface.createTable('Free Books', {
                 id: {
-                    type: Sequelize.BIGINT,
+                    type: sequelize.NUMBER,
                     primaryKey: true,
                     allowNull: false,
                     autoIncrement: true
                 },
                 name: {
-                    type: Sequelize.STRING,
+                    type: sequelize.STRING,
                     allowNull: false
                 },
+                last: {
+                    type: Sequelize.STRING
+                }
             });
         });
     },
